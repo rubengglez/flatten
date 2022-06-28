@@ -1,0 +1,18 @@
+{
+  "name": "flatten",
+  "version": "1.0.0",
+  "description": "Flatten an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "t-watch": "jest --watchAll"
+  },
+  "keywords": [
+    "challenge"
+  ],
+  "author": "rubengglez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
