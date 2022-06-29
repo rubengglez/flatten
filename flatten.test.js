@@ -44,3 +44,21 @@ test('it should flatten an array when a nested array of values is given', () => 
     const expected = [ 1, 2, 3, 4 ]
     expect(flatten(input)).toStrictEqual(expected)
 })
+
+test('it should flatten an array when a very very nested array of values is given', () => {
+    const input = [[[[[[[1, 2]]]]]]]
+    const expected = [1, 2]
+    expect(flatten(input)).toStrictEqual(expected)
+})
+
+test('it should flatten an array removing empty slots when a very very nested array of values is given', () => {
+    const input = [[[[[[[1], , 2]]]]]]
+    const expected = [1, 2]
+    expect(flatten(input)).toStrictEqual(expected)
+})
+
+test('it should flatten an array when a nested array of different values is given', () => {
+    const input = [[[[[[[1], [""], {"hello": "Alice"}, ["best comment ever"]] , [[[2]]]]]]]]
+    const expected = [1, "", {"hello": "Alice"}, "best comment ever", 2]
+    expect(flatten(input)).toStrictEqual(expected)
+})
