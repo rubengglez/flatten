@@ -38,3 +38,9 @@ test('it should do nothing when array is already flattened', () => {
     const expected = [1, 2, 3]
     expect(flatten(input)).toStrictEqual(expected)
 })
+
+test('it should flatten an array when a nested array of values is given', () => {
+    const input = [ 1, [ 2, [ 3 ] ], 4 ]
+    const expected = [ 1, 2, 3, 4 ]
+    expect(flatten(input)).toStrictEqual(expected)
+})
