@@ -23,5 +23,5 @@ Jest framework was used in this repository to test the code. To run it, execute
 If you prefer watch mode, you can run
 
 ```bash
-    $ npm t-watch
+    $ npm run t-watch
 ```
