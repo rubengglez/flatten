@@ -32,3 +32,9 @@ test('it should do nothing when empty array is given', () => {
     const expected = []
     expect(flatten(input)).toStrictEqual(expected)
 })
+
+test('it should do nothing when array is already flattened', () => {
+    const input = [1, 2, 3]
+    const expected = [1, 2, 3]
+    expect(flatten(input)).toStrictEqual(expected)
+})
