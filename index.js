@@ -5,15 +5,12 @@ const flatten = (arrayToFlatten) => {
         throw new WrongValueType(arrayToFlatten)
     }
 
-    const result = []
-    arrayToFlatten.forEach(value => {
+    return arrayToFlatten.reduce((acc, value) => {
         if (Array.isArray(value)) {
-            result.push(...flatten(value))
-        } else {
-            result.push(value)
+            return acc.concat(flatten(value))
         }
-    })
-    return result
+        return acc.concat(value)
+    }, [])
 }
 
 module.exports = flatten;
